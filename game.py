@@ -31,8 +31,12 @@ class PlayGame:
                 continue
             elif p1_roll > p2_roll:
                 self.player1.add_points(p1_roll)
+                if self.dice.is_max_roll(p1_roll):
+                    self.player2.lose_points(p2_roll)
             else:
                 self.player2.add_points(p2_roll)
+                if self.dice.is_max_roll(p2_roll):
+                    self.player1.lose_points(p1_roll)
 
             if self.player1.score > self.goal:
                 print(f"{self.player1.name}: {self.player1.score}")
