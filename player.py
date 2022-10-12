@@ -25,9 +25,5 @@ class Player:
         print(f"{self.name} has gained {amount}. Total score is now {self.score} points")
 
     def lose_points(self, amount: int) -> None:
-        if (self.score - amount) < 0:
-            self._score = 0
-            print(f"{self.name} has lost 0. Total score is now {self.score} points")
-
         self._score -= amount
         print(f"{self.name} has lost {amount}. Total score is now {self.score} points")
