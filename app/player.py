@@ -12,7 +12,7 @@ class Player:
         if isinstance(name, str) is False:
             raise ValueError("Name must be a string")
 
-        if len(name) == 0:
+        if len(name.strip()) == 0:
             raise ValueError("Name must be at least 1 character long")
         self._name = name
 
