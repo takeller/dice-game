@@ -3,7 +3,7 @@ from random import randint
 
 class Dice:
     def __init__(self, sides: int) -> None:
-        self._sides = sides
+        self.sides = sides
 
     @property
     def sides(self):

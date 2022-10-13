@@ -1,6 +1,6 @@
 class Player:
     def __init__(self, name: str) -> None:
-        self._name = name
+        self.name = name
         self._score = 0
 
     @property
