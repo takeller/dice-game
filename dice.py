@@ -18,7 +18,6 @@ class Dice:
 
         self._sides = sides
 
-    @property
     def is_max_roll(self, roll: int) -> bool:
         return roll == self.sides
 
