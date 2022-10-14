@@ -53,13 +53,13 @@ class TestPlayGameInputValidation:
 
     def test_cant_initialize_with_non_int_dice(self):
         with pytest.raises(ValueError):
-            game = PlayGame("Player1", 'Player2', 0, '5')
+            game = PlayGame("Player1", 'Player2', 25, '5')
 
     def test_cant_initialize_with_dice_less_than_two(self):
         with pytest.raises(ValueError):
-            game = PlayGame("Player1", 'Player2', 0, 1)
+            game = PlayGame("Player1", 'Player2', 25, 1)
 
         with pytest.raises(ValueError):
-            game = PlayGame("Player1", 'Player2', 0, -51)
+            game = PlayGame("Player1", 'Player2', 25, -51)
 
 
